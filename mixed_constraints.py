@@ -7,6 +7,10 @@ def phi_first_gear(v: float, T_M: float) -> float:
     """Mixed constraint for first gear: power constraint"""
     return T_M * (i_fd * GR1 / r_W) * v
 
+def d_v_phi_first_gear(v: float, T_M: float) -> float:
+    """Derivative of phi_first_gear with respect to v"""
+    return T_M * (i_fd * GR1 / r_W)
+
 def phi_second_gear(v: float, T_M: float) -> float:
     """Mixed constraint for second gear: power constraint"""
     return T_M * (i_fd * GR2 / r_W) * v

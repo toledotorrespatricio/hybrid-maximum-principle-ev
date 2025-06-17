@@ -16,6 +16,17 @@ def f_first_gear(v: float, T_M: float) -> float:
     """
     return -A1 * v**2 + B1 * T_M - C1 * v - D1
 
+def d_v_f_first_gear(v: float, T_M: float) -> float:
+    """
+    Derivative of first gear dynamics with respect to velocity
+    Args:
+        v: longitudinal velocity
+        T_M: motor torque
+    Returns:
+        d_v_f: derivative of f_first_gear with respect to v
+    """
+    return -2 * A1 * v - C1
+
 # --------------------------------------
 # 2) TRANSITION MODE DYNAMICS
 # --------------------------------------
